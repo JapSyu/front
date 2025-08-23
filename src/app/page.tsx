@@ -1,4 +1,4 @@
-'use client';
+'use client'; // 클라이언트 컴포넌트
 
 import Stat from '@/components/Stat';
 import FeatureCard from '@/components/FeatureCard';
@@ -38,7 +38,7 @@ export default function HomePage() {
             새로운 시작
           </h1>
           <p className="mt-6 text-lg text-white/90 md:text-xl">
-            토요타, 소니, 라쿠텐까지. AI 기반 맞춤 정보로 꿈의 직장을 찾아보세요.
+            소니, 소프트뱅크, 메가벤처 까지. AI 기반 맞춤 정보로 꿈의 직장을 찾아보세요.
           </p>
 
           {/* Search */}
