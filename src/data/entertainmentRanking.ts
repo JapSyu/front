@@ -11,7 +11,7 @@ export const entertainmentRanking: RankingGroup[] = [
       { name: '닌텐도', score: 69, rank: 2 },
       { name: '소니그룹', score: 69, rank: 3 },
       { name: '도호', score: 69, rank: 4 },
-      { name: '일본마이크로소프트(Xbox부문)', score: 69, rank: 5 }
+      { name: '일본마이크로소프트', score: 69, rank: 5 ,category: 'Xbox'}
     ]
   },
   {
