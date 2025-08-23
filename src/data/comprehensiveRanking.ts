@@ -19,6 +19,7 @@ export const comprehensiveRanking: RankingGroup[] = [
   {
     // score: 80-78
     title: '동경일공(東京一工)·대승 레벨',
+    description: '도쿄대・교토대・히토츠바시대・도쿄공업대',
     tier: 'S+',
     companies: [
         { name: '일본은행', score: 80, rank: 1 },
@@ -67,6 +68,7 @@ export const comprehensiveRanking: RankingGroup[] = [
 {
     // score: 77-75
     title: '동경일공(東京一工)·승리 레벨',
+    description: '도쿄대・교토대・히토츠바시대・도쿄공업대',
     tier: 'S',
     companies: [
         { name: '하쿠호도DY', score: 77, rank: 42 },
@@ -136,6 +138,7 @@ export const comprehensiveRanking: RankingGroup[] = [
 {
     // score: 74-70
     title: '지제대·와세다 게이오·대승 레벨',
+    description: '나고야대・도호쿠대・규슈대・홋카이도대・와세다대・게이오대',
     tier: 'A+',
     companies: [
         { name: 'JR도카이', score: 74, rank: 104 },
@@ -271,6 +274,7 @@ export const comprehensiveRanking: RankingGroup[] = [
 {
     // score: 69-66
     title: '지제대·와세다 게이오·승리 레벨',
+    description: '나고야대・도호쿠대・규슈대・홋카이도대・와세다대・게이오대',
     tier: 'A',
     companies: [
         { name: '일본우정(종합직)', score: 69, rank: 232 },
