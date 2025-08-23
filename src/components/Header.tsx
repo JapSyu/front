@@ -33,14 +33,14 @@ export default function Header() {
   };
 
   return (
-         <header
-       ref={headerRef}
-       className={[
-         'fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-all duration-300',
-         scrolled ? 'bg-white/95 shadow-lg border-b border-gray-200/50' : 'bg-transparent shadow-none border-b border-transparent',
-         hidden ? '-translate-y-full' : 'translate-y-0',
-       ].join(' ')}
-     >
+    <header
+      ref={headerRef}
+      className={[
+        'fixed inset-x-0 top-0 z-50 backdrop-blur-md transition-all duration-300',
+        scrolled ? 'bg-white/95 shadow-lg border-b border-gray-200/50' : 'bg-transparent shadow-none border-b border-transparent',
+        hidden ? '-translate-y-full' : 'translate-y-0',
+      ].join(' ')}
+    >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
         {/* 좌측: 로고 */}
         <Link
@@ -48,16 +48,18 @@ export default function Header() {
           className="text-xl font-extrabold bg-gradient-to-br from-indigo-500 to-purple-500 bg-clip-text text-transparent md:text-2xl"
           onClick={() => setOpen(false)}
         >
-          NipponJobs
+          JAP SYU
         </Link>
 
         {/* 우측: 데스크톱 네비 + 버튼 */}
         <div className="hidden items-center gap-8 md:flex">
           <ul className="flex items-center gap-8">
-            <li><a href="#companies" onClick={smooth('#companies')} className="font-medium text-gray-700 transition hover:text-indigo-600">기업정보</a></li>
-            <li><a href="#ai-tools" onClick={smooth('#ai-tools')} className="font-medium text-gray-700 transition hover:text-indigo-600">AI 도구</a></li>
-            <li><a href="#community" onClick={smooth('#community')} className="font-medium text-gray-700 transition hover:text-indigo-600">커뮤니티</a></li>
-            <li><a href="#guide" onClick={smooth('#guide')} className="font-medium text-gray-700 transition hover:text-indigo-600">가이드</a></li>
+            <li><Link href="/company" className="font-medium text-gray-700 transition hover:text-indigo-600">기업 정보</Link></li>
+            <li><Link href="/jobs" className="font-medium text-gray-700 transition hover:text-indigo-600">채용 정보</Link></li>
+            <li><Link href="/hensachi" className="font-medium text-gray-700 transition hover:text-indigo-600">편차치 랭킹</Link></li>
+            <li><Link href="/ai-tools" className="font-medium text-gray-700 transition hover:text-indigo-600">AI 도구</Link></li>
+            <li><Link href="/community" className="font-medium text-gray-700 transition hover:text-indigo-600">커뮤니티</Link></li>
+            <li><Link href="/guide" className="font-medium text-gray-700 transition hover:text-indigo-600">가이드</Link></li>
           </ul>
           <div className="flex items-center gap-3">
             <Link href="/login" className="rounded-full border-2 border-indigo-400 px-4 py-2 font-semibold text-indigo-500 transition hover:-translate-y-0.5 hover:bg-indigo-500 hover:text-white">
@@ -99,10 +101,12 @@ export default function Header() {
       >
         <div className="mx-auto max-w-6xl px-4">
           <ul className="flex flex-col gap-1">
-            <li><a href="#companies" onClick={smooth('#companies')} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">기업정보</a></li>
-            <li><a href="#ai-tools" onClick={smooth('#ai-tools')} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">AI 도구</a></li>
-            <li><a href="#community" onClick={smooth('#community')} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">커뮤니티</a></li>
-            <li><a href="#guide" onClick={smooth('#guide')} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">가이드</a></li>
+            <li><Link href="/company" onClick={() => setOpen(false)} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">기업 정보</Link></li>
+            <li><Link href="/jobs" onClick={() => setOpen(false)} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">채용 정보</Link></li>
+            <li><Link href="/hensachi" onClick={() => setOpen(false)} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">편차치 랭킹</Link></li>
+            <li><Link href="/ai-tools" onClick={() => setOpen(false)} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">AI 도구</Link></li>
+            <li><Link href="/community" onClick={() => setOpen(false)} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">커뮤니티</Link></li>
+            <li><Link href="/guide" onClick={() => setOpen(false)} className="block rounded-md px-2 py-2 text-gray-800 hover:bg-gray-100">가이드</Link></li>
           </ul>
           <div className="mt-3 flex gap-2">
             <Link href="/signup" onClick={() => setOpen(false)} className="flex-1 rounded-md bg-indigo-600 px-3 py-2 text-center font-semibold text-white">
