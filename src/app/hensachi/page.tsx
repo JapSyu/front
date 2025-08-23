@@ -197,16 +197,16 @@ export default function HensachiRankingPage() {
 
                                     {/* Companies Grid */}
                                     <div className="p-6">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4">
                                             {group.companies.map((company, companyIndex) => (
                                                 <div
                                                     key={companyIndex}
                                                     className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:border-indigo-200 hover:shadow-md transition-all cursor-pointer"
                                                 >
-                                                    <div className="flex items-center gap-3">
+                                                    <div className="flex items-center gap-3 flex-1 min-w-0">
 
-                                                        <div>
-                                                            <h4 className="font-bold text-gray-800">{company.name}</h4>
+                                                        <div className="min-w-0 flex-1">
+                                                            <h4 className="font-bold text-gray-800 break-words">{company.name}</h4>
                                                             {company.category && (
                                                                 <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
                                                                     {company.category}
@@ -214,7 +214,7 @@ export default function HensachiRankingPage() {
                                                             )}
                                                         </div>
                                                     </div>
-                                                    <div className="text-right">
+                                                    <div className="text-right flex-shrink-0 ml-3">
                                                         <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${getTierColor(group.tier)}`}>
                                                             {company.score}
                                                         </div>
