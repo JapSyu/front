@@ -5,3 +5,4 @@ export type { Company, RankingGroup } from './comprehensiveRanking';
 export { comprehensiveRanking } from './comprehensiveRanking';
 export { itRanking } from './itRanking';
 export { ventureRanking } from './ventureRanking';
+export { entertainmentRanking } from './entertainmentRanking';

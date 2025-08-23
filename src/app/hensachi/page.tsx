@@ -5,6 +5,7 @@ import { Search, Trophy, TrendingUp, Building2, Zap, Crown } from 'lucide-react'
 import Header from '@/components/Header';
 import {
     comprehensiveRanking,
+    entertainmentRanking,
     itRanking,
     ventureRanking,
     type RankingGroup
@@ -12,7 +13,7 @@ import {
 
 export default function HensachiRankingPage() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [activeTab, setActiveTab] = useState<'comprehensive' | 'it' | 'venture'>('comprehensive');
+    const [activeTab, setActiveTab] = useState<'comprehensive' | 'it' | 'venture' | 'entertainment'>('comprehensive');
 
     const getCurrentRanking = () => {
         switch (activeTab) {
@@ -20,6 +21,8 @@ export default function HensachiRankingPage() {
                 return itRanking;
             case 'venture':
                 return ventureRanking;
+            case 'entertainment':
+                return entertainmentRanking;
             default:
                 return comprehensiveRanking;
         }
@@ -31,6 +34,8 @@ export default function HensachiRankingPage() {
                 return 'IT업계 편차치';
             case 'venture':
                 return '벤처기업 편차치';
+            case 'entertainment':
+                return '엔터 / 게임 편차치';
             default:
                 return '종합 편차치';
         }
@@ -111,15 +116,24 @@ export default function HensachiRankingPage() {
                                 >
                                     IT업계
                                 </button>
-                                <button
-                                    onClick={() => setActiveTab('venture')}
-                                    className={`px-6 py-2 rounded-md font-medium transition-all ${activeTab === 'venture'
-                                            ? 'bg-white text-indigo-600 shadow-sm'
-                                            : 'text-gray-600 hover:text-gray-800'
-                                        }`}
-                                >
-                                    벤처
-                                </button>
+                                    <button
+                                        onClick={() => setActiveTab('venture')}
+                                        className={`px-6 py-2 rounded-md font-medium transition-all ${activeTab === 'venture'
+                                                ? 'bg-white text-indigo-600 shadow-sm'
+                                                : 'text-gray-600 hover:text-gray-800'
+                                            }`}
+                                    >
+                                        벤처
+                                    </button>
+                                    <button
+                                        onClick={() => setActiveTab('entertainment')}
+                                        className={`px-6 py-2 rounded-md font-medium transition-all ${activeTab === 'entertainment'
+                                                ? 'bg-white text-indigo-600 shadow-sm'
+                                                : 'text-gray-600 hover:text-gray-800'
+                                            }`}
+                                    >
+                                        엔터 / 게임
+                                    </button>
                             </div>
                         </div>
 
