@@ -620,7 +620,7 @@ export default function JobDetailPage() {
                           <p className="text-gray-600 text-sm">{similarJob.position}</p>
                           <p className="text-indigo-600 font-medium text-sm">{similarJob.salary}</p>
                           <div className="flex flex-wrap gap-1 mt-2">
-                            {similarJob.tags.map((tag, idx) => (
+                            {similarJob.tags.map((tag: string, idx: number) => (
                               <span key={idx} className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">
                                 {tag}
                               </span>
